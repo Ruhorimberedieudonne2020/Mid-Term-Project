@@ -85,7 +85,7 @@ nav {
   transition: color 0.2s ease;
 }
 .menu a:hover {
-  color: #004080;
+  color: var(--primary-color);
 }
 
 /* Main */
