@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insert Declaration</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <style>
+    .form-card {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .form-card h2 { margin-bottom: 20px; color: #004080; }
+    label { display: block; margin-top: 10px; font-weight: 600; }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: none;
+      background: #28a745;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+  <div class="form-card">
+    <h2>Insert New Declaration</h2>
+    <form action="process-insert.php" method="post">
+      <label>Date</label>
+      <input type="date" name="date" required>
+
+      <label>Company Name</label>
+      <input type="text" name="company" required>
+
+      <label>Owner</label>
+      <input type="text" name="owner" required>
+
+      <label>Supposed Paid</label>
+      <input type="number" name="supposed" step="0.01" required>
+
+      <label>Paid Amount</label>
+      <input type="number" name="paid" step="0.01" required>
+
+      <button type="submit">Insert</button>
+    </form>
+  </div>
+</body>
+</html>

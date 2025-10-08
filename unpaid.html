@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unpaid Declarations - Masomo Report Bs Ltd</title>
+  <link rel="stylesheet" href="styles/index-styles.css">
+  <link rel="stylesheet" href="styles/unpaid-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="branding">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" width="80" alt="Company Logo">
+        </a>
+        <a href="index.html">
+          <h1 class="site-title">Border Declaration Report</h1>
+        </a>
+      </div>
+      <nav aria-label="Main Navigation">
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="declarations.html">Declarations</a></li>
+          <li><a href="paid.html" class="active">Paid</a></li>
+          <li><a href="unpaid.html">Unpaid</a></li>
+          <li><a href="login.html">Sign In</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="teams">
+        <h2>UnPaid Declarations</h2>
+        <p class="team-intro">List of declarations that have been unpaid or partially unpaid.</p>
+
+        <div class="declaration-card">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Owner</th>
+                <th>Unpaid Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>09/29/2025</td>
+                <td>Jane Smith</td>
+                <td>$5,000</td>
+                <td>Fully UnPaid</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Action buttons -->
+          <a href="insert.html" class="btn btn-insert">➕ Insert New</a>
+          <a href="update.html" class="btn btn-update">✏️ Update</a>
+          <a href="delete.html" class="btn btn-delete">🗑 Delete</a>
+          <a href="index.html" class="btn btn-back">⬅ Back</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 Masomo's Business Ltd. All rights reserved by D.Ruhorimbere.</p>
+    </footer>
+  </div>
+</body>
+</html>

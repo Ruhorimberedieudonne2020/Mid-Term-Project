@@ -1,0 +1,64 @@
+.form-card {
+      max-width: 400px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .form-card h2 { 
+      margin-bottom: 20px; 
+      color: #004080; 
+    }
+    label { 
+      display: block; 
+      margin-top: 10px; 
+      font-weight: 600; 
+      text-align: left;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: none;
+      background: #004080;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover { background: #0066cc; }
+
+    /* Optional: link to register or back */
+    .login-links {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    .login-links a {
+      color: #004080;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+    .login-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 480px) {
+      .form-card {
+        margin: 40px 10px;
+        padding: 20px;
+      }
+      button {
+        padding: 12px;
+      }
+    }

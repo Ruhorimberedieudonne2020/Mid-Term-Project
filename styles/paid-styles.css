@@ -1,0 +1,79 @@
+.declaration-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-top: 20px;
+      overflow-x: auto;
+    }
+
+    .declaration-card table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 16px;
+    }
+
+    .declaration-card th, .declaration-card td {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .declaration-card th {
+      background: #004080;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .declaration-card tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    .declaration-card tr:hover {
+      background: #f1f7ff;
+      transition: 0.3s;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #004080;
+    }
+
+    .team-intro {
+      margin-bottom: 15px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      margin: 15px 10px 0 0;
+      padding: 12px 20px;
+      background: #004080;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #0066cc;
+    }
+
+    /* Different colors for specific actions */
+    .btn-insert { background: #28a745; }   /* Green */
+    .btn-update { background: #ffc107; }   /* Yellow */
+    .btn-delete { background: #dc3545; }   /* Red */
+    .btn-back   { background: #004080; }   /* Blue */
+
+    .btn-insert:hover { background: #218838; }
+    .btn-update:hover { background: #e0a800; }
+    .btn-delete:hover { background: #c82333; }
+    .btn-back:hover   { background: #0066cc; }
