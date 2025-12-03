@@ -50,7 +50,7 @@ app.get('/insertPaid', (req, res) => {
 });
 
 app.get('/insertUnpaid', (req, res) => {
-  res.render('insertUnpaid.ejs');
+  res.render('insertUnPaid.ejs');
 });
 
 // =====================
