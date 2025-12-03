@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Masomo Report Bs Ltd</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/login-styles.css">
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+     <header>
+      <div class="branding">
+        <a href="/index" class="logo">
+          <img src="/images/logo.png" alt="Company Logo">
+        </a>
+        <a href="/index">
+          <h1 class="site-title">Border Declaration Report</h1>
+        </a>
+      </div>
+      <!-- 🕒 Date & Time Display -->
+        <div id="datetime"></div>
+      <nav aria-label="Main Navigation">
+        <ul class="menu">
+          <li><a href="/index">Home</a></li>
+          <li><a href="/declarations">Declarations</a></li>
+          <li><a href="/paid">Paid</a></li>
+          <li><a href="/unpaid">Unpaid</a></li>
+        </ul>
+      </nav>
+      <p class="loggedUser"></p>
+    </header>
+<div class="container">
+  <img src="/images/login.svg" alt="Login Illustration" class="login-image">
+  <div class="form-card">
+    <h2>Login</h2>
+    <form action="/login" method="POST">
+      <label>Username</label>
+      <div class="input-container" id="incorrect-input">
+        <img src="/images/person.svg" alt="Username Icon" class="input-icon">
+        <input type="text" placeholder="Enter username" id="username" name="username" required>
+      </div>
+      <label>Password</label>
+      <div class="input-container">
+      <img src="/images/lock.svg" alt="Password Icon" class="input-icon">
+      <input type="password" id="password" name="password" placeholder="Enter password" required>
+      </div>
+      <button type="submit" id="login">Login</button>
+    </form>
+
+    <div class="login-links">
+      <a href="/index">Back to Home</a>
+      <!-- Optional: <a href="register.html">Register</a> -->
+    </div>
+  </div>
+</div>
+   <script>
+  // =====================
+// Date and Time Display
+// =====================
+function updateDateTime() {
+  const datetimeElement = document.getElementById('datetime');
+  if (!datetimeElement) return; // Exit if element is not on this page
+
+  const now = new Date();
+  const options = { 
+    weekday: 'long', 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric', 
+    hour: '2-digit', 
+    minute: '2-digit', 
+    second: '2-digit' 
+  };
+
+  datetimeElement.textContent = now.toLocaleString('en-US', options);
+}
+
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+</body>
+</html>
