@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Insert Unpaid</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+  <div class="form-card">
+    <h2>Insert Unpaid Declaration</h2>
+    <form id="unpaidForm">
+      <label>Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <label>Owner</label>
+      <input type="text" id="owner" name="owner" required>
+
+      <label>Unpaid Amount</label>
+      <input type="number" id="unpaid" name="unpaid" step="0.01" required>
+
+      <label>Status</label>
+        <select id="status" name="status" required>
+          <option value="">-- Select Status --</option>
+          <option value="Fully Unpaid">Fully Unpaid</option>
+          <option value="Partially Unpaid">Partially Unpaid</option>
+        </select>
+      <button type="submit" class="btn btn-save">Save</button>
+    </form>
+  </div>
+</body>
+</html>

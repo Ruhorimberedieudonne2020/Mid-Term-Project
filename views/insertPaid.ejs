@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Insert Paid</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+  <div class="form-card">
+    <h2>Insert Paid Declaration</h2>
+    <form id="paidForm">
+      <label>Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <label>Owner</label>
+      <input type="text" id="owner" name="owner" required>
+
+      <label>Paid Amount from Document</label>
+      <input type="number" id="fromDocument" name="fromDocument" step="0.01" required>
+
+      <label>Paid Amount from Warehouse</label>
+      <input type="number" id="fromWarehouse" name="fromWarehouse" step="0.01" required>
+
+    <label>Status</label>
+        <select id="status" name="status" required>
+             <option value="">-- Select Status --</option>
+            <option value="Fully Paid">Fully Paid</option>
+            <option value="Partially Paid">Partially Paid</option>
+        </select>
+      <button type="submit" class="btn btn-save">Save</button>
+    </form>
+  </div>
+</body>
+</html>
