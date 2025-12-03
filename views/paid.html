@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unpaid Declarations - Masomo Report Bs Ltd</title>
+  <title>Paid Declarations - Masomo Report Bs Ltd</title>
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="/js/main.js" defer></script>
@@ -12,7 +12,7 @@
     <header>
       <div class="branding">
         <a href="/index" class="logo">
-          <img src="images/logo.png" width="80" alt="Company Logo">
+          <img src="/images/logo.png" alt="Company Logo">
         </a>
         <a href="/index">
           <h1 class="site-title">Border Declaration Report</h1>
@@ -24,7 +24,7 @@
         <ul class="menu">
           <li><a href="/index">Home</a></li>
           <li><a href="/declarations">Declarations</a></li>
-          <li><a href="/paid" class="active">Paid</a></li>
+          <li><a href="/paid">Paid</a></li>
           <li><a href="/unpaid">Unpaid</a></li>
           <li><a id="authLink" href="/login">Sign In</a></li>
         </ul>
@@ -33,36 +33,37 @@
 
     <main>
       <section class="teams">
-        <h2>UnPaid Declarations</h2>
-        <p class="team-intro">List of declarations that have been unpaid or partially unpaid.</p>
+        <h2>Paid Declarations</h2>
+        <p class="team-intro">List of declarations that have been paid or partially paid.</p>
 
         <div class="declaration-card">
-          <div class="search-container">
+               <div class="search-container">
     <input
       type="text"
-      id="searchUnpaidInput"
+      id="searchPaidInput"
       placeholder="Search by date, company, owner, or amount..."
       class="search-input">
-    <button type="button" id="searchUnpaidBtn" class="search-btn">
+    <button type="button" id="searchPaidBtn" class="search-btn">
     <i class="fa fa-search"></i>
   </button>
-    
   </div>
-          <table id="unpaidTable">
+          <table id="paidTable">
             <thead>
               <tr>
                 <th>Date</th>
                 <th>Owner</th>
-                <th>Unpaid Amount</th>
+                <th>Paid Amount from Document</th>
+                <th>Paid Amount from Warehouse</th>
                 <th>Status</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>09/29/2025</td>
-                <td>Jane Smith</td>
-                <td>$5,000</td>
-                <td>Fully UnPaid</td>
+                <td>09/30/2025</td>
+                <td>Dieudonne Ruhorimbere</td>
+                <td>$3,500</td>
+                <td>$2,500</td>
+                <td>Partially Paid</td>
               </tr>
             </tbody>
           </table>
@@ -70,12 +71,12 @@
           <button type="submit" id="insertBtn" class="btn btn-insert">➕ Insert New</button>
           <button type="submit" id="updateBtn" class="btn btn-update">✏️ Update</button>
           <button type="submit" id="deleteBtn" class="btn btn-delete">🗑 Delete</button>
-            <!-- The Modal -->
+          <!-- The Modal -->
             <div id="myModal" class="modal">
               <!-- Modal content -->
               <div class="modal-content">
                 <span class="close">&times;</span>
-                <iframe title="insertUnpaid" src="/insertUnpaid"></iframe>
+                <iframe title="insertPaid" src="/insertPaid"></iframe>
                 </div>
             </div>
         </div>
@@ -86,25 +87,28 @@
       <p>&copy; 2025 Masomo's Business Ltd. All rights reserved by D.Ruhorimbere.</p>
     </footer>
   </div>
-<script>
+  <script>
   // =====================
 // Date and Time Display
 // =====================
 function updateDateTime() {
   const datetimeElement = document.getElementById('datetime');
-  if (!datetimeElement) return; // Exit if element is not on this page 
+  if (!datetimeElement) return; // Exit if element is not on this page
+
   const now = new Date();
-  const options = {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
+  const options = { 
+    weekday: 'long', 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric', 
+    hour: '2-digit', 
+    minute: '2-digit', 
+    second: '2-digit' 
   };
+
   datetimeElement.textContent = now.toLocaleString('en-US', options);
-} 
+}
+
 setInterval(updateDateTime, 1000);
 updateDateTime();
 </script>
