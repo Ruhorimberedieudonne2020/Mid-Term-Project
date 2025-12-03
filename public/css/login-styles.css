@@ -1,0 +1,142 @@
+/* PAGE */
+body {
+  background: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('../images/back.jpg');
+}
+.input-container {
+  position: relative;
+  width: auto; /* or desired width */
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px; /* adjust size as needed */
+  height: 20px;
+  pointer-events: none; /* lets you click through to the input */
+}
+
+.input-container input {
+  width: 100%;
+  padding-left: 40px; /* space for the icon */
+  height: 40px; /* or desired height */
+  box-sizing: border-box;
+}
+
+#username-style {  
+  font-weight: bold;
+}
+/* FLEX CONTAINER: SVG LEFT, FORM RIGHT */
+.container {
+  max-width: 1100px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+/* SVG ILLUSTRATION */
+.login-image {
+  width: 480px;
+  max-width: 100%;
+}
+
+/* LOGIN FORM CARD */
+.form-card {
+  width: 380px;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.12);
+  border-top: 8px solid rgb(46,172,232); /* Blue accent matching SVG */
+}
+
+/* Heading color to match SVG */
+.form-card h2 {
+  margin-bottom: 20px;
+  color: rgb(46,172,232);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Input labels */
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: rgb(46,172,232);
+}
+
+/* Input fields */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1.5px solid #7CA8FF;
+  box-sizing: border-box;
+  background: #f9fbff;
+  transition: 0.2s ease;
+}
+
+input:focus {
+  border-color: rgb(15, 16, 16);
+  outline: none;
+  background: #ffffff;
+}
+
+/* Login button */
+button {
+  margin-top: 25px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: rgb(46,172,232);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+button:hover {
+  font-weight: bolder;
+}
+
+/* Links */
+.login-links {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.login-links a {
+  color: rgb(244,147,80); /* Orange from SVG */
+  text-decoration: none;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE */
+@media (max-width: 1100px) {
+  .wrapper {
+    width: min(600px, 100%);
+  }
+  .container {
+    flex-direction: column;
+    margin: 40px auto;
+    gap: 30px;
+  }
+  
+  .login-image {
+    width: 70%;
+  }
+}
