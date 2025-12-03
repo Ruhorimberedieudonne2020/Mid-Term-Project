@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <script src="/js/main.js" defer></script>
+        <title>Masomo Report Bs Ltd</title>
+    </head>
+<body>
+<div class="container">
+   <header>
+      <div class="branding">
+        <a href="/index" class="logo">
+          <img src="/images/logo.png" alt="Company Logo">
+        </a>
+        <a href="/index">
+          <h1 class="site-title">Border Declaration Report</h1>
+        </a>
+      </div>
+       <!-- 🕒 Date & Time Display -->
+        <div id="datetime"></div>
+        <nav aria-label="Main Navigation">
+          <ul class="menu">
+            <li><a href="/index">Home</a></li>
+            <li><a href="/declarations">Declarations</a></li>
+            <li><a href="/paid">Paid</a></li>
+            <li><a href="/unpaid">Unpaid</a></li>
+            <li><a id="authLink" href="/login">Sign In</a></li>
+         </ul>
+      </nav>
+    </header>
+    <main>
+        <div class="welcome-message">
+            Welcome to Masomo's Business Ltd
+        </div>
+        <section class="teams">
+            <h2>Our Team Leaders</h2>
+            <p class="team-intro">
+            Meet the people behind our success and growth.
+            Dedicated, talented, and always striving for excellence.
+            </p>
+            <div class="team-list">
+              <div class="team">
+                <img src="images/chantal.png" alt="CEO">
+                <h4><strong> NYIRAMASOMO Angelique</strong></h4>
+                <p class="role"><strong> Executive Officer</strong></p>
+                <p class="desc">Visionary leader, driving company strategy and growth.</p>
+                <div class="social">
+                    <a href="#" aria-label="Visit our Facebook page"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Visit our Twitter page"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Visit our Instagram page"><i class="fab fa-instagram"></i></a>
+                </div>
+                </div>
+              <div class="team">
+                <img src="images/jolie.png" alt="Accountant">
+                <h4><strong> BUTOTO Chantal</strong></h4>
+                <p class="role"><strong>Accountant</strong></p>
+                <p class="desc">Ensures financial transparency and sustainable growth.</p>
+                <div class="social">
+                    <a href="#" aria-label="Visit our Facebook page"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Visit our Twitter page"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Visit our Instagram page"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+              <div class="team">
+                <img src="images/bucura2.png" alt="Chief of Teams">
+                <h4>UMUTONI Grace</h4>
+                <p class="role"><strong>Chief of Teams on Field</strong></p>
+                <p class="desc">Coordinates field operations and ensures team success and growth.</p>
+                <div class="social">
+                   <a href="#" aria-label="Visit our Facebook page"><i class="fab fa-facebook"></i></a>
+                   <a href="#" aria-label="Visit our Twitter page"><i class="fab fa-twitter"></i></a>
+                   <a href="#" aria-label="Visit our Instagram page"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Masomo's Business Ltd. All rights reserved by D.Ruhorimbere.</p>
+    </footer>
+</div>
+<script>
+  // =====================
+// Date and Time Display
+// =====================
+function updateDateTime() {
+  const datetimeElement = document.getElementById('datetime');
+  if (!datetimeElement) return; // Exit if element is not on this page
+
+  const now = new Date();
+  const options = { 
+    weekday: 'long', 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric', 
+    hour: '2-digit', 
+    minute: '2-digit', 
+    second: '2-digit' 
+  };
+
+  datetimeElement.textContent = now.toLocaleString('en-US', options);
+}
+
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+</body>
+</html>
